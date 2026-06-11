@@ -6,19 +6,19 @@ export interface ResponsiveImageSrc {
 
 export const heroSlides: ResponsiveImageSrc[] = [
   {
-    full: "/images/09-snow.webp",
-    mobile: "/images/09-snow-640.webp",
-    alt: "NEWAV EA1 sous la neige, vue trois-quarts avant",
+    full: "/images/hero-slide-1.png",
+    mobile: "/images/hero-slide-1.png",
+    alt: "NEWAV EA1 en mouvement sur route de montagne — vue arrière trois-quarts",
   },
   {
-    full: "/images/07-performance.webp",
-    mobile: "/images/07-performance-640.webp",
-    alt: "NEWAV EA1 en conduite dynamique sur route",
+    full: "/images/hero-slide-2.png",
+    mobile: "/images/hero-slide-2.png",
+    alt: "NEWAV EA1 au bord d'un lac au coucher du soleil — rampe déployée, accessibilité",
   },
   {
-    full: "/images/10-design-desert.webp",
-    mobile: "/images/10-design-desert-640.webp",
-    alt: "NEWAV EA1 sur route désertique, mise en valeur du design",
+    full: "/images/hero-slide-3.png",
+    mobile: "/images/hero-slide-3.png",
+    alt: "NEWAV EA1 en recharge — rampe d'accès et utilisateur en fauteuil roulant",
   },
 ];
 
@@ -74,12 +74,18 @@ export const featureCards: FeatureCard[] = [
   {
     label: "Connectivité",
     image: {
-      full: "/images/08-connected-app.webp",
-      mobile: "/images/08-connected-app-640.webp",
-      alt: "Application connectée NEWAV synchronisée avec le véhicule",
+      full: "/images/connected-remote-access.png",
+      mobile: "/images/connected-remote-access.png",
+      alt: "Application NEWAV sur smartphone — accès à distance et contrôle du véhicule",
     },
   },
 ];
+
+export const remoteAccessImage: ResponsiveImageSrc = {
+  full: "/images/connected-remote-access.png",
+  mobile: "/images/connected-remote-access.png",
+  alt: "Main tenant un smartphone affichant l'application NEWAV — contrôle à distance du véhicule",
+};
 
 export const designGallerySlides: GallerySlide[] = [
   {

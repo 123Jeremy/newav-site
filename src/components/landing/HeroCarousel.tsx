@@ -49,7 +49,7 @@ export function HeroCarousel() {
       id="hero"
       aria-roledescription="carrousel"
       aria-label="Présentation NEWAV EA1"
-      className="relative h-svh snap-start snap-always overflow-hidden"
+      className="snap-section relative overflow-hidden"
       onMouseEnter={() => setIsPaused(true)}
       onMouseLeave={() => setIsPaused(false)}
       onFocus={() => setIsPaused(true)}

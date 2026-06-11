@@ -6,7 +6,7 @@ export function LifestyleSection() {
     <section
       id="lifestyle"
       aria-labelledby="lifestyle-heading"
-      className="relative h-svh snap-start snap-always overflow-hidden"
+      className="snap-section relative overflow-hidden"
     >
       <ResponsiveImage src={lifestyleImage} objectFit="cover" />
       <div aria-hidden="true" className="absolute inset-0 bg-black/25" />

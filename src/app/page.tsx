@@ -5,6 +5,7 @@ import { FeatureCards } from "@/components/landing/FeatureCards";
 import { KeyStats } from "@/components/landing/KeyStats";
 import { DesignSection } from "@/components/landing/DesignSection";
 import { InteriorSection } from "@/components/landing/InteriorSection";
+import { RemoteAccessSection } from "@/components/landing/RemoteAccessSection";
 import { SafetySection } from "@/components/landing/SafetySection";
 import { LifestyleSection } from "@/components/landing/LifestyleSection";
 import { CtaSection } from "@/components/landing/CtaSection";
@@ -23,20 +24,18 @@ export default function HomePage() {
       <PromoBar />
       <Navbar />
 
-      <main id="contenu-principal">
-        <div className="snap-container">
-          <HeroCarousel />
-          <FeatureCards />
-          <KeyStats />
-          <DesignSection />
-          <InteriorSection />
-          <SafetySection />
-          <LifestyleSection />
-          <CtaSection />
-        </div>
+      <main id="contenu-principal" className="relative">
+        <HeroCarousel />
+        <FeatureCards />
+        <KeyStats />
+        <DesignSection />
+        <InteriorSection />
+        <RemoteAccessSection />
+        <SafetySection />
+        <LifestyleSection />
+        <CtaSection />
+        <Footer />
       </main>
-
-      <Footer />
     </>
   );
 }

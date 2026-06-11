@@ -5,7 +5,7 @@ export function CtaSection() {
     <section
       id="configurer"
       aria-labelledby="cta-heading"
-      className="flex h-svh snap-start snap-always flex-col items-center justify-center bg-white px-6 py-16 text-center"
+      className="snap-section flex flex-col items-center justify-center bg-white px-6 py-16 text-center"
     >
       <h2
         id="cta-heading"

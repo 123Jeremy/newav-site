@@ -5,7 +5,7 @@ export function InteriorSection() {
     <section
       id="interieur"
       aria-labelledby="interior-heading"
-      className="flex h-svh snap-start snap-always items-center bg-white px-6 py-16"
+      className="snap-section flex items-center bg-white px-6 py-16"
     >
       <div className="mx-auto grid w-full max-w-6xl gap-10 md:grid-cols-2 md:items-center">
         <div className="order-2 md:order-1">

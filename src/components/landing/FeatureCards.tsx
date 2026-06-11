@@ -18,7 +18,7 @@ export function FeatureCards() {
     <section
       id="caracteristiques"
       aria-labelledby="features-heading"
-      className="h-svh snap-start snap-always flex flex-col justify-center bg-white py-16"
+      className="snap-section flex flex-col justify-center bg-white py-16"
     >
       <div className="mx-auto w-full max-w-7xl px-6">
         <h2

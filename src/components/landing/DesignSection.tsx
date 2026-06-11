@@ -5,7 +5,7 @@ export function DesignSection() {
     <section
       id="design"
       aria-labelledby="design-heading"
-      className="relative h-svh snap-start snap-always overflow-hidden"
+      className="snap-section relative overflow-hidden"
     >
       <DesignGallery />
       <div

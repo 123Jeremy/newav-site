@@ -12,7 +12,7 @@ export function KeyStats() {
     <section
       id="performance"
       aria-labelledby="stats-heading"
-      className="flex h-svh snap-start snap-always items-center bg-white px-6 py-16"
+      className="snap-section flex items-center bg-white px-6 py-16"
     >
       <div className="mx-auto flex w-full max-w-4xl flex-col items-center">
         <div className="relative aspect-[16/10] w-full max-w-3xl overflow-hidden rounded-2xl">

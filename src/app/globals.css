@@ -5,16 +5,21 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    scroll-snap-type: y proximity;
+    scroll-padding-top: 5rem;
+    overflow-x: hidden;
+  }
+
+  body {
+    @apply bg-white text-anthracite font-sans antialiased;
+    overflow-x: hidden;
   }
 
   @media (prefers-reduced-motion: reduce) {
     html {
       scroll-behavior: auto;
+      scroll-snap-type: none;
     }
-  }
-
-  body {
-    @apply bg-white text-anthracite font-sans antialiased;
   }
 
   :focus-visible {
@@ -22,15 +27,9 @@
   }
 }
 
-.snap-container {
-  height: 100svh;
-  overflow-y: auto;
-  scroll-snap-type: y mandatory;
-  scroll-behavior: smooth;
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .snap-container {
-    scroll-behavior: auto;
+@layer components {
+  .snap-section {
+    @apply min-h-svh snap-start snap-always;
+    scroll-snap-stop: always;
   }
 }
