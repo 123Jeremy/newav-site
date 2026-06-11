@@ -1,0 +1,25 @@
+# Next.js 15 — Règles spécifiques
+
+## Routing
+- App Router exclusivement
+- Layouts par segment : layout.tsx pour le shell commun
+- Loading states : loading.tsx (pas de useState manuel)
+- Error states : error.tsx avec 'use client'
+
+## Rendu
+- Server Components par défaut (pas de 'use client' inutile)
+- Data fetching dans le composant serveur via fetch()
+- ISR avec `revalidate` pour les pages semi-dynamiques
+- `next/image` pour TOUTES les images (alt obligatoire)
+- `next/font` pour les polices (Plus Jakarta Sans, Inter)
+
+## Performance
+- Streaming avec `<Suspense>` pour le modèle 3D et les contenus lourds
+- Dynamic import pour les composants non-critiques
+- `generateStaticParams` pour les pages pré-rendables
+- `generateMetadata` sur chaque page pour le SEO
+
+## API Routes
+- Validation Zod obligatoire sur toutes les entrées
+- Rate limiting à implémenter sur /api/waitlist et /api/checkout
+- Pas de secrets dans le code → process.env

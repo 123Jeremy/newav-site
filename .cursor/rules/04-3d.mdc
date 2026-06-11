@@ -1,0 +1,28 @@
+# 3D / React Three Fiber — Règles spécifiques
+
+## Stack
+- @react-three/fiber (Canvas, hooks, events)
+- @react-three/drei (Environment, OrbitControls, useGLTF, ContactShadows)
+- three (@types/three pour les types)
+
+## Règles
+- Modèles dans /public/models/ au format .glb compressé Draco
+- Toujours charger les modèles dans `<Suspense>` avec un fallback UI
+- 'use client' obligatoire pour tout composant qui importe R3F
+- OrbitControls : enablePan=false, limiter minPolarAngle/maxPolarAngle
+- Environment preset="studio" pour le configurateur, "city" pour la scène extérieure
+
+## Accessibilité 3D
+- `prefers-reduced-motion` : désactiver les auto-rotations et animations
+- Proposer un mode alternatif textuel/formulaire (bouton "Version accessible")
+- Le modèle 3D n'est jamais le seul moyen de configurer le véhicule
+
+## Optimisation
+- Modèle .glb compressé Draco (gltf-transform)
+- Séparer les parties configurables (body, wheels, interior) en meshes nommés
+- Pas d'animations 60fps en continu → seulement lors des interactions
+- Canvas rendu uniquement quand visible (IntersectionObserver)
+
+## Proxy d'événements R3F
+- Utiliser les événements déclaratifs : onClick, onPointerOver sur les meshes
+- Pas de raycasting manuel dans useEffect

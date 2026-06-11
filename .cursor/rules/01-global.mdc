@@ -1,0 +1,25 @@
+# Règles globales — Projet NEWAV
+
+## Stack
+- Next.js 15 avec App Router (jamais Pages Router)
+- TypeScript strict mode — pas de `any`, pas d'implicite
+- Tailwind CSS v3 pour le styling
+- Pas de CSS modules, pas de styled-components
+
+## Conventions
+- Composants fonctionnels uniquement, jamais de classes
+- Interfaces > types, maps > enums
+- Named exports, jamais de default exports
+- Noms de variables descriptifs : `isLoading`, `hasError`, `preorderCount`
+- Pas de `console.log` dans le code commité
+
+## Patterns à suivre
+- Server Components par défaut, 'use client' uniquement si interactif ou 3D
+- Toute donnée externe = Zod validation
+- Fichiers dans /src/ (app/, components/, lib/, db/)
+
+## À ne JAMAIS faire
+- Pas de `useEffect` pour du data fetching → Server Components
+- Pas de `any` → `unknown` et narrowing
+- Pas de placeholders `// TODO` → implémenter ou ne pas inclure
+- Pas de code non typé → tout a un type explicite

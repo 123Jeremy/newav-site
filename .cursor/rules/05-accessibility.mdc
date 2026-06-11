@@ -1,0 +1,37 @@
+# Accessibilité — Règles non-négociables
+
+NEWAV cible les personnes à mobilité réduite. L'accessibilité est la priorité #1.
+
+## Obligatoire sur chaque composant
+- Tout `<img>` ou `<Image>` a un attribut `alt` descriptif
+- Tout `<button>` a un texte visible ou `aria-label`
+- Tout `<input>/<select>/<textarea>` a un `<label>` associé
+- Focus visible : `ring-2 ring-sage-500 outline-none` sur les éléments interactifs
+- HTML sémantique : `<nav>`, `<main>`, `<section>`, `<h1>`-`<h6>` (hiérarchie stricte)
+- `lang="fr"` sur `<html>`
+
+## Composants interactifs
+- Ajouter les attributs ARIA : role, aria-expanded, aria-controls, aria-selected
+- Gérer les événements clavier : Enter, Space, Escape, Arrow keys
+- Tester la navigation complète au clavier (Tab/Shift+Tab)
+
+## Formulaires
+- Chaque champ a un label visible + htmlFor
+- Messages d'erreur avec `aria-describedby` et `aria-live="polite"`
+- Les erreurs de validation sont annoncées aux lecteurs d'écran
+- Pas de CAPTCHA visuel → utiliser Cloudflare Turnstile (accessible)
+
+## Couleurs et contraste
+- Contraste texte/fond ≥ 4.5:1 (AA)
+- Ne jamais transmettre d'information uniquement par la couleur
+- États (hover, focus, active, disabled) tous distincts visuellement
+
+## Média
+- Vidéos : sous-titres et transcription disponibles
+- Modèle 3D : alternative accessible (version textuelle/formulaire)
+- Animations : respecter `prefers-reduced-motion`
+
+## Validation
+- Tester avec axe DevTools à chaque PR
+- Tester la navigation au clavier manuellement
+- Viser 0 erreur automatique (Lighthouse accessibility 100)

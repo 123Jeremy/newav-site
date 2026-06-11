@@ -1,0 +1,28 @@
+# Tailwind CSS — Règles spécifiques
+
+## Convention
+- Mobile-first : commencer par le design mobile
+- Breakpoints cohérents : sm (640px), md (768px), lg (1024px), xl (1280px)
+- Couleurs via la config Tailwind (pas de valeurs hex arbitraires)
+
+## Palette NEWAV (tailwind.config.ts)
+- `ink` : #0B1410 (noir-vert profond, fond principal)
+- `sage.500` : #5C8E69 (vert sauge signature, primaire)
+- `sage.300` : #9BBFA3 (vert sauge clair)
+- `bone` : #F5F2EC (blanc cassé, texte clair)
+- `sage.50` → `sage.900` : échelle complète disponible
+
+## Typographie
+- `font-display` : Plus Jakarta Sans (titres)
+- `font-sans` : Inter (corps)
+
+## À faire
+- Classes Tailwind uniquement, pas de style={} inline
+- Grouper les classes par préoccupation : layout → typo → couleur → état
+- Mode sombre par défaut (fond ink, texte bone)
+- Espacement : utiliser `tracking-wider2` (0.18em) pour les titres uppercase
+
+## À ne pas faire
+- Pas de `!important` → revoir la spécificité
+- Pas de `@apply` dans les CSS modules → utiliser les composants
+- Pas de couleurs hors palette sans raison valable
